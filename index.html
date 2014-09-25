@@ -38,6 +38,7 @@
     <link rel="apple-touch-icon-precomposed" href="img/logo.png">
     <link rel="icon" href="favicon.ico">
 
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bpggmmljdiliancllaapiggllnkbjocb">
 </head>
 
 <body class="bs-docs-home">
@@ -91,7 +92,7 @@
     <main class="bs-docs-masthead" id="content" role="main">
         <div class="container">
             <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">D</span>
-            <p class="lead">Ddict is a Browser Extension to help you instantly translate text on websites or PDF files by a double click or a keypress.</p>
+            <p class="lead">Ddict is a Browser Extension to help you instantly translate text on websites or PDF files by a double-click or a keypress.</p>
             <p>Powered by Google Translate.</p>
             <p class="lead">
                 <a href="#download" class="btn btn-outline-inverse btn-lg">Download Ddict</a>
@@ -168,7 +169,7 @@
 
             <div class="row bs-docs-featured-sites">
                 <div class="col-sm-4">
-                    <a href="https://addons.opera.com/en/extensions/details/ddict">
+                    <a id="install_opera" href="https://addons.opera.com/en/extensions/details/ddict/">
                         <img style="display:inline" src="img/opera.jpeg" alt="Opera" class="img-responsive">
                     </a>
                     <h3>Opera</h3>
@@ -176,7 +177,7 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <a href="https://chrome.google.com/webstore/detail/ddict/bpggmmljdiliancllaapiggllnkbjocb">
+                    <a id="install_chrome" href="https://chrome.google.com/webstore/detail/ddict/bpggmmljdiliancllaapiggllnkbjocb">
                         <img style="display:inline" src="img/chrome.jpeg" alt="Chrome" class="img-responsive">
                     </a>
                     <h3>Google Chrome</h3>
@@ -217,11 +218,17 @@
         </div>
     </footer>
 
+    <div id='popup' style="display:none; position: fixed;" class="alert alert-info" role="alert">
+        <p>Downloading... Please wait...</p>
+    </div>
+
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/install.js"></script>
 
     <!-- Analytics
 ================================================== -->

@@ -42,7 +42,7 @@ $(function() {
 
     function show() {
         var top = $(window).height()/10 - $popup.height()/2;
-        var left = $(window).width()/2 - $popup.width()/2;
+        var left = $(window).width()/2 - $popup.width()/2 - 15;
 
         $popup.css({
             top: top + 'px',

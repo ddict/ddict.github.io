@@ -1,10 +1,12 @@
 $(function() {
-    var $chrome = $('#install_chrome');
-    var $opera  = $('#install_opera');
+    var $chrome  = $('#install_chrome');
+    var $opera   = $('#install_opera');
+    var $firefox = $('#install_firefox');
 
     var $popup  = $('#popup');
 
     $chrome.on('click', function(e) {
+        ga('send', 'event', 'chrome', 'click');
         show();
         var url = e.currentTarget.href;
 
@@ -23,6 +25,7 @@ $(function() {
     });
 
     $opera.on('click', function(e) {
+        ga('send', 'event', 'opera', 'click');
         show();
         var url = e.currentTarget.href;
 
@@ -38,6 +41,12 @@ $(function() {
             location.href = url;
         });
         return false;
+    });
+
+    $firefox.on('click', function(e) {
+        ga('send', 'event', 'firefox', 'click');
+        var url = e.currentTarget.href;
+        return location.href = url;
     });
 
     function show() {

@@ -1,11 +1,11 @@
-$(function() {
+$(function () {
     var $chrome = $('#install_chrome');
     var $opera = $('#install_opera');
     var $firefox = $('#install_firefox');
 
     var $popup = $('#popup');
 
-    $chrome.on('click', function(e) {
+    $chrome.on('click', function (e) {
         ga('send', 'event', 'chrome', 'click');
         show();
         var url = e.currentTarget.href;
@@ -15,17 +15,17 @@ $(function() {
             return;
         }
 
-        chrome.webstore.install('', function() {
+        chrome.webstore.install('', function () {
             //success
             hide();
-        }, function() {
+        }, function () {
             //fail
             location.href = url;
         });
         return false;
     });
 
-    $opera.on('click', function(e) {
+    $opera.on('click', function (e) {
         ga('send', 'event', 'opera', 'click');
         show();
         var url = e.currentTarget.href;
@@ -35,17 +35,17 @@ $(function() {
             return;
         }
 
-        opr.addons.installExtension('fcfpagpiibkilokeihmaggjgheaemgbi', function() {
+        opr.addons.installExtension('fcfpagpiibkilokeihmaggjgheaemgbi', function () {
             //success
             hide();
-        }, function() {
+        }, function () {
             //fail
             location.href = url;
         });
         return false;
     });
 
-    $firefox.on('click', function(e) {
+    $firefox.on('click', function (e) {
         ga('send', 'event', 'firefox', 'click');
         var url = e.currentTarget.href;
         location.href = url
